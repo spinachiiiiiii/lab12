@@ -20,7 +20,7 @@ def start(message):
         bot.send_message(message.from_user.id,
                          "Hello, it is bot for testing.I have 10 questions for you.And we start now!")
     random.shuffle(questions)
-    for i in range(len(questions)):
+   """ for i in range(len(questions)):
         random.shuffle(questions[i].variants)
         bot.send_message(message.chat.id, questions[i].text, reply_markup = buttons(questions[i].variants))
         flag = 1

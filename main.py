@@ -64,4 +64,4 @@ def echo_all(message):
         bot.send_message(message.chat.id,"Your are finish test.Enter the '/start', if you want pass the test again!")
 
 
-bot.polling(none_stop=True)
+bot.polling()

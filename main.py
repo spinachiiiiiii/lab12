@@ -19,8 +19,9 @@ def start(message):
     if message.text == "/start":
         bot.send_message(message.from_user.id,
                          "Hello, it is bot for testing.I have 10 questions for you.And we start now!")
+    """ 
     random.shuffle(questions)
-   """ for i in range(len(questions)):
+    for i in range(len(questions)):
         random.shuffle(questions[i].variants)
         bot.send_message(message.chat.id, questions[i].text, reply_markup = buttons(questions[i].variants))
         flag = 1
@@ -32,7 +33,7 @@ def start(message):
             test_time = round(time()) - start_time
             bot.send_message(message.chat.id, f"You pass the test.🎉\nYour time is {test_time} seconds.⌛\nToday date:{datetime.now().strftime('%d-%m-%Y,%H:%M:%S')}.\nYour goal is {total}/10!👍\nCongrats!🥳", reply_markup = markup)
 
-"""
+
 def buttons(variants):
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=2)
     btn1 = types.KeyboardButton(variants[0])

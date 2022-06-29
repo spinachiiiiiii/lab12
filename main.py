@@ -32,7 +32,7 @@ def start(message):
             test_time = round(time()) - start_time
             bot.send_message(message.chat.id, f"You pass the test.🎉\nYour time is {test_time} seconds.⌛\nToday date:{datetime.now().strftime('%d-%m-%Y,%H:%M:%S')}.\nYour goal is {total}/10!👍\nCongrats!🥳", reply_markup = markup)
 
-
+"""
 def buttons(variants):
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=2)
     btn1 = types.KeyboardButton(variants[0])
@@ -63,5 +63,5 @@ def echo_all(message):
     else:
         bot.send_message(message.chat.id,"Your are finish test.Enter the '/start', if you want pass the test again!")
 
-
-bot.polling()
+"""
+bot.infinity_polling(True)
